@@ -1,9 +1,9 @@
 ## 1 hacker
 
-Host: hades.hackmyvm.eu
-Port: 6666
-User: hacker
-Pass: begood!
+> Host: hades.hackmyvm.eu
+> Port: 6666
+> User: hacker
+> Pass: begood!
 
 ```bash
 C:\Users\Administrator>ssh hacker@hades.hackmyvm.eu -p 6666
@@ -259,6 +259,7 @@ cat: ianthe_pass.txt: Permission denied
 hacker@hades:/opt$ ./gift_hacker       
 acantha@hades:/opt$
 ```
+
 ## 2 acantha
 ```bash
 acantha@hades:/opt$ cd ~
@@ -947,9 +948,11 @@ Dec Hex    Dec Hex    Dec Hex  Dec Hex  Dec Hex  Dec Hex   Dec Hex   Dec Hex
  15 0F SI   31 1F US   47 2F /  63 3F ?  79 4F O  95 5F _  111 6F o  127 7F DEL
 ```
 所以发现了吗？
-53  ==>  5  ==>  57
-57  ==>  9  ==>  94
-它只读了第一位，这样我们就可以进行验证一下：
+
+> 53  ==>  5  ==>  57
+> 57  ==>  9  ==>  94
+> 它只读了第一位，这样我们就可以进行验证一下：
+
 ```bash
 anthea@hades:~$ export MYID=1;./obsessed 
 Current MYID: 49
@@ -1090,11 +1093,11 @@ User arete may run the following commands on hades:
     (artemis) NOPASSWD: /sbin/capsh
 ```
 
-参考 https://gtfobins.github.io/gtfobins/capsh/#shell
-
-It can be used to break out from restricted environments by spawning an interactive system shell.
-
-capsh --
+> 参考 https://gtfobins.github.io/gtfobins/capsh/#shell
+>
+> It can be used to break out from restricted environments by spawning an interactive system shell.
+>
+> capsh --
 
 ```bash
 arete@hades:~$ sudo -u artemis /sbin/capsh --

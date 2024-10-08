@@ -477,10 +477,8 @@ int main()
 ```
 脚本做了如下几件事情：
 - 赋权 2006
-  - ```bash
   - atalanta@hades:/var/tmp$ id athena
-    uid=2006(athena) gid=2006(athena) groups=2006(athena)
-  - ```
+  - uid=2006(athena) gid=2006(athena) groups=2006(athena)
 - 获取并打印HOME环境变量
 - 尝试打开HOME目录为文件
 - 执行外部命令并捕获输出
@@ -630,7 +628,10 @@ Enter next number:
 NO :_(
 ```
 运气不错第一次就找到三个，尝试继续进行探测，阔以尝试[群主的方案](https://www.bilibili.com/video/BV1y642137HN/?spm_id_from=333.788&vd_source=8981ead94b755f367ac539f6ccd37f77)：
+
+```bash
 for i in $(seq 9); do echo -e "1\n2\n3\n$i" | ./numbers;sleep 0.2; done
+```
 
 ```bash
 aura@hades:~$ for i in $(seq 9); do echo -e "1\n2\n3\n$i" | ./numbers  | grep -c 'OK'; sleep 0.2; done | nl
